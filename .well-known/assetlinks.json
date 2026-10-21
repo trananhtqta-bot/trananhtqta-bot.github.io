@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.trananhtqta_bot.leocotmo",
+        "sha256_cert_fingerprints": ["1C:98:CE:A8:11:E4:F7:FE:70:49:4C:E6:22:CB:01:3A:DC:84:10:B9:8D:A9:69:06:D5:3A:38:19:F2:ED:86:64"]
+      }
+    }]
