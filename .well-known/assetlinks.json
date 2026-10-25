@@ -1,8 +1,26 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "io.github.trananhtqta_bot.leocotmo",
-        "sha256_cert_fingerprints": ["1C:98:CE:A8:11:E4:F7:FE:70:49:4C:E6:22:CB:01:3A:DC:84:10:B9:8D:A9:69:06:D5:3A:38:19:F2:ED:86:64"]
-      }
-    }]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.trananhtqta_bot.leocotmo",
+      "sha256_cert_fingerprints": [
+        "1C:98:CE:A8:11:E4:F7:FE:70:49:4C:E6:22:CB:01:3A:DC:84:10:B9:8D:A9:69:06:D5:3A:38:19:F2:ED:86:64"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.trananhtqta_bot.bengoan",
+      "sha256_cert_fingerprints": [
+        "99:B4:21:83:4A:0C:A8:93:19:C0:56:E9:AA:34:6F:27:39:2A:B4:40:F2:4C:81:55:8B:D6:26:25:0C:E0:72:14"
+      ]
+    }
+  }
+]
