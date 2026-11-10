@@ -1,0 +1,23 @@
+{
+  "name": "tb-root",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "../dist",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "routes": [
+    {
+      "pattern": "thaibinh.shop/*",
+      "zone_name": "thaibinh.shop"
+    },
+    {
+      "pattern": "www.thaibinh.shop/*",
+      "zone_name": "thaibinh.shop"
+    }
+  ]
+}
