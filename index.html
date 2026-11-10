@@ -3,12 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Góc Nhỏ Nuôi Cô Chủ</title>
-<meta http-equiv="refresh" content="0;url=/gocnho/">
+<title>Đang chuyển…</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="0;url=https://tb-gocnho.tb-shop-2026.workers.dev/gocnho/">
 <link rel="canonical" href="https://thaibinh.shop/gocnho/">
-<script>location.replace('/gocnho/');</script>
+<script>
+(function () {
+  var url = 'https://tb-gocnho.tb-shop-2026.workers.dev/gocnho/' + location.search + location.hash;
+  var go = function () { location.replace(url); };
+  var jobs = [];
+  try {
+    if (navigator.serviceWorker) {
+      jobs.push(navigator.serviceWorker.getRegistrations().then(function (rs) {
+        return Promise.all(rs.map(function (r) { return r.unregister(); }));
+      }));
+    }
+    if (window.caches) {
+      jobs.push(caches.keys().then(function (ks) {
+        return Promise.all(ks.map(function (k) { return caches.delete(k); }));
+      }));
+    }
+  } catch (e) {}
+  var t = setTimeout(go, 400);
+  if (jobs.length) {
+    Promise.all(jobs).then(function () { clearTimeout(t); go(); }, function () { clearTimeout(t); go(); });
+  } else {
+    go();
+  }
+})();
+</script>
 </head>
 <body>
-<p><a href="/gocnho/">Góc Nhỏ Nuôi Cô Chủ</a></p>
+<p>Đang chuyển…</p>
 </body>
 </html>

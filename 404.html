@@ -3,11 +3,48 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Góc Nhỏ Nuôi Cô Chủ</title>
-<meta http-equiv="refresh" content="0;url=/">
-<script>location.replace('/');</script>
+<title>Đang chuyển…</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="0;url=https://tb-gocnho.tb-shop-2026.workers.dev/gocnho/">
+<script>
+(function () {
+  var path = location.pathname || '/';
+  var host;
+  if (path === '/gocnho' || path.indexOf('/gocnho/') === 0) {
+    host = 'https://tb-gocnho.tb-shop-2026.workers.dev';
+  } else if (path === '/khonggian' || path.indexOf('/khonggian/') === 0) {
+    host = 'https://tb-khonggian.tb-shop-2026.workers.dev';
+  } else if (path === '/Turin' || path.indexOf('/Turin/') === 0) {
+    host = 'https://tb-turin.tb-shop-2026.workers.dev';
+  } else {
+    host = 'https://tb-gocnho.tb-shop-2026.workers.dev';
+    path = '/gocnho/';
+  }
+  var url = host + path + location.search + location.hash;
+  var go = function () { location.replace(url); };
+  var jobs = [];
+  try {
+    if (navigator.serviceWorker) {
+      jobs.push(navigator.serviceWorker.getRegistrations().then(function (rs) {
+        return Promise.all(rs.map(function (r) { return r.unregister(); }));
+      }));
+    }
+    if (window.caches) {
+      jobs.push(caches.keys().then(function (ks) {
+        return Promise.all(ks.map(function (k) { return caches.delete(k); }));
+      }));
+    }
+  } catch (e) {}
+  var t = setTimeout(go, 400);
+  if (jobs.length) {
+    Promise.all(jobs).then(function () { clearTimeout(t); go(); }, function () { clearTimeout(t); go(); });
+  } else {
+    go();
+  }
+})();
+</script>
 </head>
 <body>
-<p><a href="/">Góc Nhỏ Nuôi Cô Chủ</a></p>
+<p>Đang chuyển…</p>
 </body>
 </html>
